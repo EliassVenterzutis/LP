@@ -10,9 +10,6 @@ const Steps = () => {
             <h2 className="mt-6 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
               Get the Job Done in 3 Simple Steps
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-lg font-normal text-gray-700 lg:text-xl lg:leading-8">
-              Create your own blog with us and launch it with just 4 easy steps
-            </p>
           </div>
           <ul className="mx-auto mt-12 grid max-w-md grid-cols-1 gap-10 sm:mt-16 lg:mt-20 lg:max-w-5xl lg:grid-cols-3">
             <li className="flex-start group relative flex lg:flex-col">

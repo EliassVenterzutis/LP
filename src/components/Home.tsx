@@ -20,7 +20,7 @@ const Home = ({ isVisable, setVisability }: Props) => {
               onClick={() => setVisability(!isVisable)}
               className="flex items-center mt-auto text-PrimaryBlue bg-gray-100 border-0 py-2 px-4 mr-10 focus:outline-none hover:bg-gray-500 rounded text-xl font-bold"
             >
-              Join a waiting list
+              Try TenderPRO first
               <svg
                 fill="none"
                 stroke="currentColor"

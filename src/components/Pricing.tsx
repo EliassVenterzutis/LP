@@ -9,9 +9,6 @@ const Pricing = () => {
           <h2 className="mt-6 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
             Pricing
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg font-normal text-gray-700 lg:text-xl lg:leading-8">
-            Create your own blog with us and launch it with just 4 easy steps
-          </p>
           {/* <div className="flex mx-auto border-2 border-indigo-500 rounded overflow-hidden mt-6">
             <button className="py-1 px-4 bg-indigo-500 text-white focus:outline-none">
               Monthly

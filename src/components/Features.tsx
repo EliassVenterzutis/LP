@@ -9,9 +9,6 @@ const Features = () => {
           <h2 className="mt-6 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
             Because Property Management Deserves Better Tools
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg font-normal text-gray-700 lg:text-xl lg:leading-8">
-            Create your own blog with us and launch it with just 4 easy steps
-          </p>
         </div>
         <div className="flex flex-wrap -m-4">
           <div className="p-4 md:w-1/3">
@@ -36,8 +33,10 @@ const Features = () => {
               </div>
               <div className="flex-grow">
                 <p className="leading-relaxed text-base">
-                  Centralized tender dashboard Compare offers in a clear format
-                  Track contracts, payments, and progress
+                  All your properties. Every tender. One streamlined workspace.
+                  From creating and comparing offers to signing contracts and
+                  managing payments — everything happens in one place, clearly
+                  and securely.
                 </p>
               </div>
             </div>
@@ -65,8 +64,10 @@ const Features = () => {
               </div>
               <div className="flex-grow">
                 <p className="leading-relaxed text-base">
-                  Find tenders relevant to your field Submit structured offers
-                  Manage projects, contracts, and invoices
+                  Find relevant tenders. Win more work. Get paid faster.Discover
+                  tenders in your field, make structured offers, track decisions
+                  in real time, and manage contracts and invoices in one place —
+                  without email chaos.
                 </p>
               </div>
             </div>
@@ -95,8 +96,9 @@ const Features = () => {
               </div>
               <div className="flex-grow">
                 <p className="leading-relaxed text-base">
-                  Save hours of admin work One platform from tender to payment
-                  Transparent, auditable workflows
+                  Because tendering shouldn’t feel like a second job. TenderPRO
+                  saves hours of admin by centralizing the full workflow — from
+                  publishing tenders to payments — in one transparent platform.
                 </p>
               </div>
             </div>
