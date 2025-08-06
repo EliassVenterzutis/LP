@@ -29,23 +29,49 @@ type FormData = z.infer<typeof schema>;
 
 interface Props {
   isVisable: boolean;
+  setFormData: {
+    setName: (name: string) => void;
+    setEmail: (email: string) => void;
+    setPhone: (phone: string) => void;
+    setMessage: (message: string) => void;
+  };
+  formData: {
+    name: string;
+    email: string;
+    phone: string;
+    message: string;
+  };
 }
 
-const Form = ({ isVisable }: Props) => {
+const Form = ({
+  isVisable,
+  setFormData,
+  formData: { name, email, phone, message },
+}: Props) => {
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm<FormData>({
     resolver: zodResolver(schema),
   });
 
-  const onSubmit = (data: FieldValues) => console.log(data);
+  const onSubmit = (data: FormData) => {
+    setFormData.setName(data.Name);
+    setFormData.setEmail(data.Email);
+    if (data.Phone != null) setFormData.setPhone(data.Phone);
+    if (data.Message != null) setFormData.setMessage(data.Message);
+    reset();
+  };
 
   return (
     <>
       {isVisable && (
-        <div className="px-5 max-w-1/2 py-24 mx-auto bg-gray-100 text-gray-900 rounded-lg">
+        <div className="px-5 max-w-1/2 py-15 mx-auto bg-gray-100 text-gray-900 rounded-lg">
+          <h1 className="title-font sm:text-5xl text-4xl mb-8 font-semibold text-gray-900 leading-15 max-w-200 text-center">
+            <b>Join the waiting list!</b>
+          </h1>
           <form onSubmit={handleSubmit(onSubmit)}>
             <div>
               <span className="uppercase text-sm text-gray-600 font-bold">
