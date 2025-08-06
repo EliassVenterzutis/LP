@@ -1,53 +1,108 @@
+import { useForm, type FieldValues } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+
+const schema = z.object({
+  Name: z
+    .string()
+    .min(2, "Name must be at least 2 characters")
+    .max(50, "Name must be at most 50 characters"),
+  Email: z.string().email("Invalid email address"),
+  Phone: z
+    .string()
+    .refine(
+      (val) => val === undefined || val === "" || /^\+?[\d\s]{7,15}$/.test(val),
+      {
+        message: "Invalid phone number",
+      }
+    )
+    .optional(),
+  Message: z
+    .string()
+    .refine((val) => val === undefined || val === "" || val.length >= 10, {
+      message: "Message must be at least 10 characters",
+    })
+    .optional(),
+});
+
+type FormData = z.infer<typeof schema>;
+
 interface Props {
   isVisable: boolean;
 }
 
 const Form = ({ isVisable }: Props) => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormData>({
+    resolver: zodResolver(schema),
+  });
+
+  const onSubmit = (data: FieldValues) => console.log(data);
+
   return (
     <>
       {isVisable && (
         <div className="px-5 max-w-1/2 py-24 mx-auto bg-gray-100 text-gray-900 rounded-lg">
-          <form>
+          <form onSubmit={handleSubmit(onSubmit)}>
             <div>
               <span className="uppercase text-sm text-gray-600 font-bold">
                 Full Name *
               </span>
               <input
+                {...register("Name")}
                 className="w-full bg-gray-200 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-indigo-400"
                 type="text"
                 placeholder="Enter your Name"
                 required
               />
+              {errors.Name && (
+                <label className="text-red-500">{errors.Name.message}</label>
+              )}
             </div>
             <div className="mt-8">
               <span className="uppercase text-sm text-gray-600 font-bold">
                 Email *
               </span>
               <input
+                {...register("Email")}
                 className="w-full bg-gray-200 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-indigo-400"
                 type="email"
                 placeholder="Enter your email address"
                 required
               />
+              {errors.Email && (
+                <label className="text-red-500">{errors.Email.message}</label>
+              )}
             </div>
             <div className="mt-8">
               <span className="uppercase text-sm text-gray-600 font-bold">
                 Phone Number
               </span>
               <input
+                {...register("Phone")}
                 className="w-full bg-gray-200 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-indigo-400"
                 type="phone"
                 placeholder="Enter your Phone Number including country code"
               />
+              {errors.Phone && (
+                <label className="text-red-500">{errors.Phone.message}</label>
+              )}
             </div>
             <div className="mt-8">
               <span className="uppercase text-sm text-gray-600 font-bold">
                 Message
               </span>
               <textarea
+                {...register("Message")}
                 className="w-full h-32 bg-gray-200 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-indigo-400"
                 placeholder="Enter your Message"
               ></textarea>
+              {errors.Message && (
+                <label className="text-red-500">{errors.Message.message}</label>
+              )}
             </div>
             <div className="mt-8">
               <button
