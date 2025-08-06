@@ -1,4 +1,4 @@
-import { useForm, type FieldValues } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 
@@ -35,19 +35,9 @@ interface Props {
     setPhone: (phone: string) => void;
     setMessage: (message: string) => void;
   };
-  formData: {
-    name: string;
-    email: string;
-    phone: string;
-    message: string;
-  };
 }
 
-const Form = ({
-  isVisable,
-  setFormData,
-  formData: { name, email, phone, message },
-}: Props) => {
+const Form = ({ isVisable, setFormData }: Props) => {
   const {
     register,
     handleSubmit,

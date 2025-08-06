@@ -82,7 +82,6 @@ function App() {
       <Form
         isVisable={isVisable}
         setFormData={{ setName, setEmail, setPhone, setMessage }}
-        formData={{ name, email, phone, message }}
       ></Form>
       <Features></Features>
       <Steps></Steps>
