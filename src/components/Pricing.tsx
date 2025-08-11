@@ -3,10 +3,10 @@ const Pricing = () => {
     <section className="text-gray-600 body-font overflow-hidden">
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-col text-center w-full mb-20">
-          <p className="text-sm font-bold uppercase tracking-widest text-PrimaryGreen">
+          <p className="text-sm font-title uppercase tracking-widest text-PrimaryGreen">
             How much?
           </p>
-          <h2 className="mt-6 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
+          <h2 className="mt-6 text-3xl font-title tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
             Pricing
           </h2>
           {/* <div className="flex mx-auto border-2 border-indigo-500 rounded overflow-hidden mt-6">
@@ -19,13 +19,13 @@ const Pricing = () => {
         <div className="flex flex-wrap justify-center-safe">
           <div className="p-4 xl:w-1/3 md:w-1/2 w-full">
             <div className="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden">
-              <h2 className=" text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl lg:text-3 xl">
+              <h2 className=" text-3xl font-title tracking-tight text-gray-900 sm:text-2xl lg:text-3 xl">
                 Property Manager Plan
               </h2>
-              <h3 className="text-xl font-bold mb-2 pb-4 text-gray-900 border-b border-gray-200 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
+              <h3 className="text-xl font-medium mb-2 pb-4 text-gray-900 border-b border-gray-200 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
                 Price: Coming Soon
               </h3>
-              <p className="flex items-center text-gray-600 mb-2">
+              <p className="flex items-center text-gray-600 mb-2 text-base">
                 <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-PrimaryGreen text-white rounded-full flex-shrink-0">
                   <svg
                     fill="none"
@@ -41,7 +41,7 @@ const Pricing = () => {
                 </span>
                 Tender creation & management
               </p>
-              <p className="flex items-center text-gray-600 mb-2">
+              <p className="flex items-center text-gray-600 mb-2 text-base">
                 <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-PrimaryGreen text-white rounded-full flex-shrink-0">
                   <svg
                     fill="none"
@@ -57,7 +57,7 @@ const Pricing = () => {
                 </span>
                 Team roles per property
               </p>
-              <p className="flex items-center text-gray-600 mb-2">
+              <p className="flex items-center text-gray-600 mb-2 text-base">
                 <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-PrimaryGreen text-white rounded-full flex-shrink-0">
                   <svg
                     fill="none"
@@ -73,7 +73,7 @@ const Pricing = () => {
                 </span>
                 Contractor access
               </p>
-              <p className="flex items-center text-gray-600 mb-2">
+              <p className="flex items-center text-gray-600 mb-2 text-base">
                 <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-PrimaryGreen text-white rounded-full flex-shrink-0">
                   <svg
                     fill="none"
@@ -126,14 +126,14 @@ const Pricing = () => {
           </div>
           <div className="p-4 xl:w-1/3 md:w-1/2 w-full">
             <div className="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden">
-              <h2 className=" text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl lg:text-3 xl">
+              <h2 className=" text-3xl font-title tracking-tight text-gray-900 sm:text-2xl lg:text-3 xl">
                 Property Owner Plan
               </h2>
-              <h3 className="text-xl font-bold mb-2 pb-4 text-gray-900 border-b border-gray-200 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
+              <h3 className="text-xl font-medium mb-2 pb-4 text-gray-900 border-b border-gray-200 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
                 Price: Coming Soon
               </h3>
 
-              <p className="flex items-center text-gray-600 mb-2">
+              <p className="flex items-center text-gray-600 mb-2 text-base">
                 <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-PrimaryGreen text-white rounded-full flex-shrink-0">
                   <svg
                     fill="none"
@@ -149,7 +149,7 @@ const Pricing = () => {
                 </span>
                 Access to industry-specific tenders
               </p>
-              <p className="flex items-center text-gray-600 mb-2">
+              <p className="flex items-center text-gray-600 mb-2 text-base">
                 <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-PrimaryGreen text-white rounded-full flex-shrink-0">
                   <svg
                     fill="none"
@@ -165,7 +165,7 @@ const Pricing = () => {
                 </span>
                 Offer submission tools
               </p>
-              <p className="flex items-center text-gray-600 mb-2">
+              <p className="flex items-center text-gray-600 mb-2 text-base">
                 <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-PrimaryGreen text-white rounded-full flex-shrink-0">
                   <svg
                     fill="none"
@@ -181,7 +181,7 @@ const Pricing = () => {
                 </span>
                 Contract generation
               </p>
-              <p className="flex items-center text-gray-600 mb-2">
+              <p className="flex items-center text-gray-600 mb-2 text-base">
                 <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-PrimaryGreen text-white rounded-full flex-shrink-0">
                   <svg
                     fill="none"
@@ -218,14 +218,14 @@ const Pricing = () => {
           </div>
           <div className="p-4 xl:w-1/3 md:w-1/2 w-full">
             <div className="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden">
-              <h2 className=" text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl lg:text-3 xl">
+              <h2 className=" text-3xl font-title tracking-tight text-gray-900 sm:text-2xl lg:text-3 xl">
                 Service Provider Plan
               </h2>
-              <h3 className="text-xl font-bold mb-2 pb-4 text-gray-900 border-b border-gray-200 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
+              <h3 className="text-xl font-medium mb-2 pb-4 text-gray-900 border-b border-gray-200 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
                 Price: Coming Soon
               </h3>
 
-              <p className="flex items-center text-gray-600 mb-2">
+              <p className="flex items-center text-gray-600 mb-2 text-base">
                 <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-PrimaryGreen text-white rounded-full flex-shrink-0">
                   <svg
                     fill="none"
@@ -241,7 +241,7 @@ const Pricing = () => {
                 </span>
                 Access to industry-specific tenders
               </p>
-              <p className="flex items-center text-gray-600 mb-2">
+              <p className="flex items-center text-gray-600 mb-2 text-base">
                 <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-PrimaryGreen text-white rounded-full flex-shrink-0">
                   <svg
                     fill="none"
@@ -257,7 +257,7 @@ const Pricing = () => {
                 </span>
                 Offer submission tools
               </p>
-              <p className="flex items-center text-gray-600 mb-2">
+              <p className="flex items-center text-gray-600 mb-2 text-base">
                 <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-PrimaryGreen text-white rounded-full flex-shrink-0">
                   <svg
                     fill="none"
@@ -273,7 +273,7 @@ const Pricing = () => {
                 </span>
                 Contract generation
               </p>
-              <p className="flex items-center text-gray-600 mb-2">
+              <p className="flex items-center text-gray-600 mb-2 text-base">
                 <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-PrimaryGreen text-white rounded-full flex-shrink-0">
                   <svg
                     fill="none"

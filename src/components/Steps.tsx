@@ -4,10 +4,10 @@ const Steps = () => {
       <section className="bg-gray-100 py-22 sm:py-26 lg:py-30 xl:py-34">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <p className="text-sm font-bold uppercase tracking-widest text-PrimaryGreen">
+            <p className="text-sm font-title uppercase tracking-widest text-PrimaryGreen">
               How It Works?
             </p>
-            <h2 className="mt-6 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
+            <h2 className="mt-6 text-3xl font-title tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
               Get the Job Done in 3 Simple Steps
             </h2>
           </div>
@@ -32,10 +32,10 @@ const Steps = () => {
                 </svg>
               </div>
               <div className="ml-6 lg:ml-0 lg:mt-10">
-                <h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
+                <h3 className="text-xl font-medium text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
                   Tender creation
                 </h3>
-                <h4 className="mt-2 text-base text-gray-700">
+                <h4 className="mt-2 text-base font-base text-gray-700">
                   The Property Owner or Manager creates a tender.
                 </h4>
               </div>
@@ -60,10 +60,10 @@ const Steps = () => {
                 </svg>
               </div>
               <div className="ml-6 lg:ml-0 lg:mt-10">
-                <h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
+                <h3 className="text-xl font-medium text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
                   Offer submition
                 </h3>
-                <h4 className="mt-2 text-base text-gray-700">
+                <h4 className="mt-2 text-base font-base text-gray-700">
                   Contarctors or Services providers sumbit their offers.
                 </h4>
               </div>
@@ -88,10 +88,10 @@ const Steps = () => {
                 </svg>
               </div>
               <div className="ml-6 lg:ml-0 lg:mt-10">
-                <h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
+                <h3 className="text-xl font-medium text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
                   Tender awarding
                 </h3>
-                <h4 className="mt-2 text-base text-gray-700">
+                <h4 className="mt-2 text-base font-base text-gray-700">
                   The Property Owner or Manager awards the tender to the most
                   promising offer.
                 </h4>
