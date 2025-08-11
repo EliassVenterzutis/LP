@@ -20,7 +20,7 @@ const Home = ({ isVisable, setVisability }: Props) => {
               onClick={() => setVisability(!isVisable)}
               className="flex items-center mt-auto text-PrimaryBlue bg-gray-100 border-0 py-2 px-4 mr-10 focus:outline-none hover:bg-gray-500 rounded text-xl font-title"
             >
-              Try TenderPRO first
+              Get early access
               <svg
                 fill="none"
                 stroke="currentColor"
@@ -34,7 +34,7 @@ const Home = ({ isVisable, setVisability }: Props) => {
               </svg>
             </button>
 
-            <button className="flex items-center mt-auto text-PrimaryBlue bg-PrimaryGreen border-0 py-2 px-4 focus:outline-none hover:bg-gray-500 rounded text-xl font-title">
+            {/* <button className="flex items-center mt-auto text-PrimaryBlue bg-PrimaryGreen border-0 py-2 px-4 focus:outline-none hover:bg-gray-500 rounded text-xl font-title">
               Schedule a demo
               <svg
                 fill="none"
@@ -47,7 +47,7 @@ const Home = ({ isVisable, setVisability }: Props) => {
               >
                 <path d="M5 12h14M12 5l7 7-7 7"></path>
               </svg>
-            </button>
+            </button> */}
           </div>
         </div>
         {/* <button className="ml-4 inline-flex text-PrimaryBlue bg-PrimaryGreen border-0 py-2 px-6 focus:outline-none hover:bg-PrimaryBlue hover:text-PrimaryWhite *:rounded text-lg">

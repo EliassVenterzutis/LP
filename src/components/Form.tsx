@@ -58,71 +58,79 @@ const Form = ({ isVisable, setFormData }: Props) => {
   return (
     <>
       {isVisable && (
-        <div className="px-5 max-w-1/2 py-15 mx-auto bg-gray-100 text-gray-900 rounded-lg">
-          <h1 className="title-font font-title sm:text-5xl text-4xl mb-8 font-semibold text-gray-900 leading-15 max-w-200 text-center">
+        <div className="w-full max-w-md mx-auto px-4 py-8 sm:py-12 bg-gray-100 text-gray-900 rounded-lg sm:max-w-lg">
+          <h1 className="font-title text-2xl sm:text-3xl font-semibold text-gray-900 mb-6 text-center">
             <b>Join the waiting list!</b>
           </h1>
-          <form onSubmit={handleSubmit(onSubmit)}>
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
             <div>
-              <span className="uppercase text-sm text-gray-600 font-title">
+              <label className="uppercase text-sm text-gray-600 font-title block mb-2">
                 Full Name *
-              </span>
+              </label>
               <input
                 {...register("Name")}
-                className="w-full font-medium bg-gray-200 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-indigo-400"
+                className="w-full bg-gray-200 text-gray-900 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400 text-base"
                 type="text"
                 placeholder="Enter your Name"
                 required
               />
               {errors.Name && (
-                <label className="text-red-500">{errors.Name.message}</label>
+                <p className="text-red-500 text-sm mt-1">
+                  {errors.Name.message}
+                </p>
               )}
             </div>
-            <div className="mt-8">
-              <span className="uppercase text-sm text-gray-600 font-title">
+            <div>
+              <label className="uppercase text-sm text-gray-600 font-title block mb-2">
                 Email *
-              </span>
+              </label>
               <input
                 {...register("Email")}
-                className="w-full font-medium bg-gray-200 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-indigo-400"
+                className="w-full bg-gray-200 text-gray-900 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400 text-base"
                 type="email"
                 placeholder="Enter your email address"
                 required
               />
               {errors.Email && (
-                <label className="text-red-500">{errors.Email.message}</label>
+                <p className="text-red-500 text-sm mt-1">
+                  {errors.Email.message}
+                </p>
               )}
             </div>
-            <div className="mt-8">
-              <span className="uppercase text-sm text-gray-600 font-title">
+            <div>
+              <label className="uppercase text-sm text-gray-600 font-title block mb-2">
                 Phone Number
-              </span>
+              </label>
               <input
                 {...register("Phone")}
-                className="w-full font-medium bg-gray-200 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-indigo-400"
-                type="phone"
+                className="w-full bg-gray-200 text-gray-900 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400 text-base"
+                type="tel"
                 placeholder="Enter your Phone Number including country code"
               />
               {errors.Phone && (
-                <label className="text-red-500">{errors.Phone.message}</label>
+                <p className="text-red-500 text-sm mt-1">
+                  {errors.Phone.message}
+                </p>
               )}
             </div>
-            <div className="mt-8">
-              <span className="uppercase text-sm text-gray-600 font-title">
+            <div>
+              <label className="uppercase text-sm text-gray-600 font-title block mb-2">
                 Message
-              </span>
+              </label>
               <textarea
                 {...register("Message")}
-                className="w-full font-medium h-32 bg-gray-200 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-indigo-400"
+                className="w-full bg-gray-200 text-gray-900 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400 text-base h-24"
                 placeholder="Enter your Message"
               ></textarea>
               {errors.Message && (
-                <label className="text-red-500">{errors.Message.message}</label>
+                <p className="text-red-500 text-sm mt-1">
+                  {errors.Message.message}
+                </p>
               )}
             </div>
-            <div className="mt-8">
+            <div>
               <button
-                className="text-x1 font-title tracking-wide bg-PrimaryGreen text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline hover:bg-indigo-700"
+                className="w-full bg-PrimaryGreen text-gray-100 p-3 rounded-lg font-title tracking-wide text-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-400"
                 type="submit"
               >
                 Send Message

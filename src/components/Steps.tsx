@@ -32,7 +32,7 @@ const Steps = () => {
                 </svg>
               </div>
               <div className="ml-6 lg:ml-0 lg:mt-10">
-                <h3 className="text-xl font-medium text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
+                <h3 className="text-xl font-title text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
                   Tender creation
                 </h3>
                 <h4 className="mt-2 text-base font-base text-gray-700">
@@ -60,7 +60,7 @@ const Steps = () => {
                 </svg>
               </div>
               <div className="ml-6 lg:ml-0 lg:mt-10">
-                <h3 className="text-xl font-medium text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
+                <h3 className="text-xl font-title text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
                   Offer submition
                 </h3>
                 <h4 className="mt-2 text-base font-base text-gray-700">
@@ -88,7 +88,7 @@ const Steps = () => {
                 </svg>
               </div>
               <div className="ml-6 lg:ml-0 lg:mt-10">
-                <h3 className="text-xl font-medium text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
+                <h3 className="text-xl font-title text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
                   Tender awarding
                 </h3>
                 <h4 className="mt-2 text-base font-base text-gray-700">
