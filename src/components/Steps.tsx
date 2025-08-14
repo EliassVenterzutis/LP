@@ -18,16 +18,14 @@ const Steps = () => {
             ></span>
             <div className="flex-shrink-0 w-20 h-20 bg-PrimaryGreen text-white rounded-full inline-flex items-center justify-center">
               <svg
-                fill="none"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                className="w-10 h-10"
-                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-12 h-12"
+                viewBox="0 0 32 32"
               >
-                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-                <circle cx="12" cy="7" r="4"></circle>
+                <path
+                  fill="currentColor"
+                  d="M23.906 3.969A4.097 4.097 0 0 0 21 5.188L5.187 21l-.062.313l-1.094 5.5l-.312 1.468l1.469-.312l5.5-1.094l.312-.063L26.813 11a4.075 4.075 0 0 0 0-5.813a4.097 4.097 0 0 0-2.907-1.218zm0 1.906c.504 0 1.012.23 1.5.719c.973.972.973 2.027 0 3l-.718.687l-2.97-2.969l.688-.718c.489-.489.996-.719 1.5-.719zm-3.593 2.844l2.968 2.969L11.188 23.78a6.813 6.813 0 0 0-2.97-2.968zM6.938 22.438a4.734 4.734 0 0 1 2.625 2.625l-3.282.656z"
+                />
               </svg>
             </div>
             <div className="ml-6 lg:ml-0 lg:mt-10">
@@ -46,16 +44,18 @@ const Steps = () => {
             ></span>
             <div className="flex-shrink-0 w-20 h-20 bg-PrimaryGreen text-white rounded-full inline-flex items-center justify-center">
               <svg
-                fill="none"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                className="w-10 h-10"
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-12 h-12"
                 viewBox="0 0 24 24"
               >
-                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-                <circle cx="12" cy="7" r="4"></circle>
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m9.474 16l9.181 3.284a1.1 1.1 0 0 0 1.462-.887L21.99 4.239c.114-.862-.779-1.505-1.567-1.13L2.624 11.605c-.88.42-.814 1.69.106 2.017l2.44.868l1.33.467M13 17.26l-1.99 3.326c-.65.808-1.959.351-1.959-.683V17.24a2 2 0 0 1 .53-1.356l3.871-4.2"
+                />
               </svg>
             </div>
             <div className="ml-6 lg:ml-0 lg:mt-10">
@@ -74,16 +74,14 @@ const Steps = () => {
             ></span>
             <div className="flex-shrink-0 w-20 h-20 bg-PrimaryGreen text-white rounded-full inline-flex items-center justify-center">
               <svg
-                fill="none"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                className="w-10 h-10"
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-12 h-12"
                 viewBox="0 0 24 24"
               >
-                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-                <circle cx="12" cy="7" r="4"></circle>
+                <path
+                  fill="currentColor"
+                  d="M21 4h-3V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v1H3a1 1 0 0 0-1 1v3a4 4 0 0 0 4 4h1.54A6 6 0 0 0 11 13.91V16h-1a3 3 0 0 0-3 3v2a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-2a3 3 0 0 0-3-3h-1v-2.09A6 6 0 0 0 16.46 12H18a4 4 0 0 0 4-4V5a1 1 0 0 0-1-1ZM6 10a2 2 0 0 1-2-2V6h2v2a6 6 0 0 0 .35 2Zm8 8a1 1 0 0 1 1 1v1H9v-1a1 1 0 0 1 1-1Zm2-10a4 4 0 0 1-8 0V4h8Zm4 0a2 2 0 0 1-2 2h-.35A6 6 0 0 0 18 8V6h2Z"
+                />
               </svg>
             </div>
             <div className="ml-6 lg:ml-0 lg:mt-10">
