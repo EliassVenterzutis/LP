@@ -7,7 +7,7 @@ const Features = () => {
             Who is it for?
           </p>
           <h2 className="mt-6 text-3xl font-title tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
-            Because Property Management Deserves Better Tools
+            Because Property Management Deserves Smart Tools
           </h2>
         </div>
         <div className="flex flex-wrap -m-4 overflow-x-hidden">
@@ -36,10 +36,10 @@ const Features = () => {
               </div>
               <div className="flex-grow">
                 <p className="leading-relaxed text-base font-base">
-                  All your properties. Every tender. One streamlined workspace.
-                  From creating and comparing offers to signing contracts and
-                  managing payments — everything happens in one place, clearly
-                  and securely.
+                  All your properties. Every tender. One clear, connected
+                  workspace. From publishing and comparing offers to signing
+                  contracts and tracking payments — everything is centralized,
+                  secure, and easy to manage.
                 </p>
               </div>
             </div>
@@ -65,10 +65,10 @@ const Features = () => {
               </div>
               <div className="flex-grow">
                 <p className="leading-relaxed text-base font-base">
-                  Find relevant tenders. Win more work. Get paid faster.
-                  Discover tenders in your field, make structured offers, track
-                  decisions in real time, and manage contracts and invoices in
-                  one place — without email chaos.
+                  Find tenders that matter, win more projects, and get paid
+                  faster. Discover opportunities, send structured offers, track
+                  decisions in real time, and manage contracts and invoices
+                  without drowning in email threads.
                 </p>
               </div>
             </div>
@@ -95,9 +95,10 @@ const Features = () => {
               </div>
               <div className="flex-grow">
                 <p className="leading-relaxed text-base font-base">
-                  Because tendering shouldn’t feel like a second job. TenderPRO
-                  saves hours of admin by centralizing the full workflow — from
-                  publishing tenders to payments — in one transparent platform.
+                  Because Tendering Shouldn’t Be a Full-Time Job. TenderPRO cuts
+                  hours of admin by bringing your entire tender workflow into
+                  one transparent, AI-ready platform — from publishing to
+                  payment."
                 </p>
               </div>
             </div>

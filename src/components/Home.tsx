@@ -9,11 +9,12 @@ const Home = ({ isVisable, setVisability }: Props) => {
       <div className="container mx-auto flex px-5 py-10 flex-col md:flex-row items-center justify-center">
         <div className="lg:flex-grow md:w-1/2 flex flex-col items-center text-center mb-16 md:mb-0">
           <h1 className="font-title sm:text-5xl text-4xl mb-4 text-gray-900 font-bold max-w-2xl">
-            Manage real estate tenders without chaos
+            Turn Tender Chaos into Clarity
           </h1>
           <p className="mb-8 leading-relaxed text-lg max-w-xl font-base">
-            One platform to publish, compare, and close tenders — built for
-            property managers and service providers.
+            A single platform to create, compare, and close tenders — built for
+            property managers, contractors, and service providers who value
+            efficiency and transparency.
           </p>
           <div className="flex justify-center">
             <button

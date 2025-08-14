@@ -7,7 +7,7 @@ const Steps = () => {
             How It Works?
           </p>
           <h2 className="mt-6 text-3xl font-title tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
-            Get the Job Done in 3 Simple Steps
+            Get the Job Done in 3 Steps
           </h2>
         </div>
         <ul className="mx-auto mt-12 grid max-w-full sm:max-w-md grid-cols-1 gap-10 sm:mt-16 lg:mt-20 lg:max-w-5xl lg:grid-cols-3 overflow-x-hidden">
@@ -30,10 +30,11 @@ const Steps = () => {
             </div>
             <div className="ml-6 lg:ml-0 lg:mt-10">
               <h3 className="text-xl font-title text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
-                Tender creation
+                Create a Tender
               </h3>
               <h4 className="mt-2 text-base font-base text-gray-700">
-                The Property Owner or Manager creates a tender.
+                Property owners or managers launch a new tender with clear
+                requirements and deadlines.
               </h4>
             </div>
           </li>
@@ -60,10 +61,11 @@ const Steps = () => {
             </div>
             <div className="ml-6 lg:ml-0 lg:mt-10">
               <h3 className="text-xl font-title text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
-                Offer submission
+                Submit Offers
               </h3>
               <h4 className="mt-2 text-base font-base text-gray-700">
-                Contractors or Service providers submit their offers.
+                Contractors and service providers respond with structured,
+                comparable proposals.
               </h4>
             </div>
           </li>
@@ -86,11 +88,11 @@ const Steps = () => {
             </div>
             <div className="ml-6 lg:ml-0 lg:mt-10">
               <h3 className="text-xl font-title text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
-                Tender awarding
+                Award the Tender
               </h3>
               <h4 className="mt-2 text-base font-base text-gray-700">
-                The Property Owner or Manager awards the tender to the most
-                promising offer.
+                Choose the best offer with confidence, then move straight to
+                contract and project delivery.
               </h4>
             </div>
           </li>
