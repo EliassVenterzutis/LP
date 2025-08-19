@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import Features from "./components/Features";
 import Footer from "./components/Footer";
-import Form from "./components/Form";
 import Home from "./components/Home";
 import NavBar from "./components/NavBar";
 import Priceing from "./components/Pricing";
@@ -11,7 +10,6 @@ import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { db } from "./firebase";
 
 function App() {
-  const [isVisable, setVisability] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -78,14 +76,14 @@ function App() {
   return (
     <>
       <NavBar></NavBar>
-      <Home isVisable={isVisable} setVisability={setVisability}></Home>
-      <Form
-        isVisable={isVisable}
-        setFormData={{ setName, setEmail, setPhone, setMessage }}
-      ></Form>
+
+      <Home setFormData={{ setName, setEmail, setPhone, setMessage }}></Home>
+
       <Features></Features>
       <Steps></Steps>
+
       <Priceing></Priceing>
+
       <Footer></Footer>
     </>
   );

@@ -2,7 +2,7 @@ import logo from "../../public/TenderPro_Full_Transperent.svg";
 
 function Navbar() {
   return (
-    <nav className="text-white bg-PrimaryBlue flex items-center w-full mb-20 overflow-x-hidden">
+    <nav className="text-white bg-PrimaryBlue flex items-center w-full overflow-x-hidden">
       <img
         src={logo}
         alt="TenderPro Logo"
