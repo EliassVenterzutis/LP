@@ -81,192 +81,212 @@ const Home: React.FC<Props> = ({ setFormData }) => {
   };
 
   return (
-    <section className="text-gray-600 body-font relative overflow-x-hidden">
-      <div className="relative bg-cover bg-center pt-20 pb-20 overflow-x-hidden">
-        {/* Background Image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            opacity: 0.6,
-            backgroundImage: `url(/city4.jpg)`,
-            backgroundSize: "cover",
-            zIndex: -2,
-          }}
-        ></div>
-        {/* Colored Overlay */}
-        <div
-          className="absolute inset-0 bg-PrimaryBlue opacity-70"
-          style={{ zIndex: -1 }}
-        ></div>
-        {/* Content */}
-        <div className="container mx-auto flex px-5 py-10 flex-col lg:flex-row items-center justify-between relative z-10 gap-8 overflow-x-hidden">
-          {/* Left: Home Content */}
-          <div className="lg:w-1/2 w-full flex flex-col items-center text-center mb-16 lg:mb-0 lg:pr-8">
-            <Reveal keyframes={pureFade} duration={800} delay={200} triggerOnce>
-              <h1 className="font-title sm:text-5xl text-4xl mb-4 text-white font-bold max-w-2xl">
-                Turn Tender Chaos into Clarity
-              </h1>
-            </Reveal>
-            <Reveal keyframes={slideUp} duration={800} delay={400} triggerOnce>
-              <p className="mb-8 leading-relaxed text-lg max-w-xl font-base text-white">
-                A single platform to create, compare, and close tenders — built
-                for property managers, contractors, and service providers who
-                value efficiency and transparency.
-              </p>
-            </Reveal>
-            <div className="flex justify-center"></div>
-          </div>
-          {/* Right: Form Content with Frosted Glass Effect */}
-          <div
-            className="lg:w-1/2 w-full max-w-md px-4 py-8 sm:py-12 bg-white/30 text-gray-900 rounded-2xl sm:max-w-lg border border-white/20 shadow-md"
-            style={{ backdropFilter: "blur(10px)" }}
+    <section
+      id="home"
+      className="relative overflow-x-hidden min-h-[85vh] flex items-center"
+    >
+      {/* Background image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage: `url(/city4.jpg)`,
+          zIndex: -3,
+        }}
+        aria-hidden="true"
+      />
+
+      {/* Gradient overlay filter */}
+      <div
+        className="absolute inset-0 bg-gradient-to-br from-PrimaryBlue/80 to-PrimaryBlueLight/80"
+        style={{ zIndex: -2 }}
+        aria-hidden="true"
+      ></div>
+
+      {/* Additional subtle dark overlay for contrast */}
+      <div
+        className="absolute inset-0 bg-black/40"
+        style={{ zIndex: -1 }}
+        aria-hidden="true"
+      />
+
+      <div className="container mx-auto px-6 py-12 lg:py-16 flex flex-col lg:flex-row items-center gap-10 relative z-10 max-w-7xl">
+        {/* Text content first on all screen sizes */}
+        <div className="w-full lg:w-1/2 flex flex-col items-start text-left order-1">
+          <Reveal keyframes={pureFade} duration={800} delay={200} triggerOnce>
+            <h1 className="font-title text-white text-4xl sm:text-5xl font-extrabold leading-tight max-w-3xl drop-shadow-lg">
+              Turn Tender Chaos into Clarity
+            </h1>
+          </Reveal>
+          <Reveal keyframes={slideUp} duration={800} delay={400} triggerOnce>
+            <p className="mt-5 mb-8 text-base sm:text-lg font-base text-PrimaryWhite max-w-lg drop-shadow-md leading-relaxed">
+              A single platform to create, compare, and close tenders — built
+              for property managers, contractors, and service providers who
+              value efficiency and transparency.
+            </p>
+          </Reveal>
+        </div>
+
+        {/* Form second on all screen sizes */}
+        <div className="w-full lg:w-1/2 max-w-lg p-8 lg:p-10 bg-white/35 rounded-3xl backdrop-blur-xl border border-white/40 shadow-xl order-2">
+          <Reveal keyframes={pureFade} duration={800} delay={600} triggerOnce>
+            <h2 className="text-2xl lg:text-3xl font-title font-semibold text-white mb-6 text-center drop-shadow-md">
+              Join the waiting list!
+            </h2>
+          </Reveal>
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="space-y-6 lg:space-y-8"
           >
-            <Reveal keyframes={pureFade} duration={800} delay={600} triggerOnce>
-              <h1 className="font-title text-2xl sm:text-3xl font-semibold text-PrimaryBlue mb-6 text-center">
-                Join the waiting list!
-              </h1>
-            </Reveal>
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-              <Reveal
-                keyframes={slideUp}
-                duration={800}
-                delay={800}
-                triggerOnce
-              >
-                <div>
-                  <label className="uppercase text-sm text-PrimaryBlue font-title block mb-2">
-                    Full Name *
-                  </label>
-                  <input
-                    {...register("Name")}
-                    className={`w-full bg-white/50 text-gray-900 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-PrimaryBlue text-base transition-colors duration-300 ${
-                      isSubmitted ? "border-2 border-PrimaryGreen" : ""
-                    }`}
-                    type="text"
-                    placeholder="Enter your Name"
-                    required
-                  />
-                  {errors.Name && (
-                    <p className="text-red-500 text-sm mt-1">
-                      {errors.Name.message}
-                    </p>
-                  )}
-                </div>
-              </Reveal>
-              <Reveal
-                keyframes={slideUp}
-                duration={800}
-                delay={900}
-                triggerOnce
-              >
-                <div>
-                  <label className="uppercase text-sm text-PrimaryBlue font-title block mb-2">
-                    Email *
-                  </label>
-                  <input
-                    {...register("Email")}
-                    className={`w-full bg-white/50 text-gray-900 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-PrimaryBlue text-base transition-colors duration-300 ${
-                      isSubmitted ? "border-2 border-PrimaryGreen" : ""
-                    }`}
-                    type="email"
-                    placeholder="Enter your email address"
-                    required
-                  />
-                  {errors.Email && (
-                    <p className="text-red-500 text-sm mt-1">
-                      {errors.Email.message}
-                    </p>
-                  )}
-                </div>
-              </Reveal>
-              <Reveal
-                keyframes={slideUp}
-                duration={800}
-                delay={1000}
-                triggerOnce
-              >
-                <div>
-                  <label className="uppercase text-sm text-PrimaryBlue font-title block mb-2">
-                    Phone Number
-                  </label>
-                  <input
-                    {...register("Phone")}
-                    className={`w-full bg-white/50 text-gray-900 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-PrimaryBlue text-base transition-colors duration-300 ${
-                      isSubmitted ? "border-2 border-PrimaryGreen" : ""
-                    }`}
-                    type="tel"
-                    placeholder="Enter your Phone Number including country code"
-                  />
-                  {errors.Phone && (
-                    <p className="text-red-500 text-sm mt-1">
-                      {errors.Phone.message}
-                    </p>
-                  )}
-                </div>
-              </Reveal>
-              <Reveal
-                keyframes={slideUp}
-                duration={800}
-                delay={1100}
-                triggerOnce
-              >
-                <div>
-                  <label className="uppercase text-sm text-PrimaryBlue font-title block mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    {...register("Message")}
-                    className={`w-full bg-white/50 text-gray-900 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-PrimaryBlue text-base h-24 transition-colors duration-300 ${
-                      isSubmitted ? "border-2 border-PrimaryGreen" : ""
-                    }`}
-                    placeholder="Enter your Message"
-                  ></textarea>
-                  {errors.Message && (
-                    <p className="text-red-500 text-sm mt-1">
-                      {errors.Message.message}
-                    </p>
-                  )}
-                </div>
-              </Reveal>
-              <Reveal
-                keyframes={slideUp}
-                duration={800}
-                delay={1200}
-                triggerOnce
-              >
-                <div>
-                  <button
-                    className={`w-full flex items-center justify-center text-gray-100 p-3 rounded-lg font-title tracking-wide text-lg focus:outline-none focus:ring-2 focus:ring-PrimaryBlue transition-colors duration-300 ${
+            <Reveal keyframes={slideUp} duration={800} delay={800} triggerOnce>
+              <div>
+                <label
+                  htmlFor="Name"
+                  className="block text-sm font-title text-white mb-1"
+                >
+                  Full Name *
+                </label>
+                <input
+                  id="Name"
+                  {...register("Name")}
+                  className={`w-full bg-white/70 text-gray-900 p-3 rounded-xl transition-shadow duration-300 shadow-sm focus:outline-none 
+                    focus:ring-4 ${
                       isSubmitted
-                        ? "bg-PrimaryGreen"
-                        : "bg-PrimaryBlue hover:bg-PrimaryGreen"
-                    } box-border`}
-                    type="submit"
-                    disabled={isSubmitted}
-                  >
-                    {isSubmitted ? (
-                      "We will contact you soon!"
-                    ) : (
-                      <>
-                        Get early access!
-                        <svg
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          className="w-4 h-4 ml-5 flex-shrink-0"
-                          viewBox="0 0 20 20"
-                        >
-                          <path d="M5 12h14M12 5l7 7-7 7"></path>
-                        </svg>
-                      </>
-                    )}
-                  </button>
-                </div>
-              </Reveal>
-            </form>
-          </div>
+                        ? "border-2 border-PrimaryGreen ring-0"
+                        : "border border-transparent focus:ring-PrimaryBlue"
+                    }
+                  `}
+                  type="text"
+                  placeholder="Enter your Name"
+                  required
+                  autoComplete="name"
+                />
+                {errors.Name && (
+                  <p className="text-red-400 text-sm mt-1 italic">
+                    {errors.Name.message}
+                  </p>
+                )}
+              </div>
+            </Reveal>
+            <Reveal keyframes={slideUp} duration={800} delay={900} triggerOnce>
+              <div>
+                <label
+                  htmlFor="Email"
+                  className="block text-sm font-title text-white mb-1"
+                >
+                  Email *
+                </label>
+                <input
+                  id="Email"
+                  {...register("Email")}
+                  className={`w-full bg-white/70 text-gray-900 p-3 rounded-xl transition-shadow duration-300 shadow-sm focus:outline-none 
+                    focus:ring-4 ${
+                      isSubmitted
+                        ? "border-2 border-PrimaryGreen ring-0"
+                        : "border border-transparent focus:ring-PrimaryBlue"
+                    }
+                  `}
+                  type="email"
+                  placeholder="Enter your email address"
+                  required
+                  autoComplete="email"
+                />
+                {errors.Email && (
+                  <p className="text-red-400 text-sm mt-1 italic">
+                    {errors.Email.message}
+                  </p>
+                )}
+              </div>
+            </Reveal>
+            <Reveal keyframes={slideUp} duration={800} delay={1000} triggerOnce>
+              <div>
+                <label
+                  htmlFor="Phone"
+                  className="block text-sm font-title text-white mb-1"
+                >
+                  Phone Number
+                </label>
+                <input
+                  id="Phone"
+                  {...register("Phone")}
+                  className={`w-full bg-white/70 text-gray-900 p-3 rounded-xl transition-shadow duration-300 shadow-sm focus:outline-none 
+                    focus:ring-4 ${
+                      isSubmitted
+                        ? "border-2 border-PrimaryGreen ring-0"
+                        : "border border-transparent focus:ring-PrimaryBlue"
+                    }
+                  `}
+                  type="tel"
+                  placeholder="Enter your Phone Number including country code"
+                  autoComplete="tel"
+                />
+                {errors.Phone && (
+                  <p className="text-red-400 text-sm mt-1 italic">
+                    {errors.Phone.message}
+                  </p>
+                )}
+              </div>
+            </Reveal>
+            <Reveal keyframes={slideUp} duration={800} delay={1100} triggerOnce>
+              <div>
+                <label
+                  htmlFor="Message"
+                  className="block text-sm font-title text-white mb-1"
+                >
+                  Message
+                </label>
+                <textarea
+                  id="Message"
+                  {...register("Message")}
+                  className={`w-full bg-white/70 text-gray-900 p-3 rounded-xl transition-shadow duration-300 shadow-sm focus:outline-none focus:ring-4 resize-none 
+                    ${
+                      isSubmitted
+                        ? "border-2 border-PrimaryGreen ring-0"
+                        : "border border-transparent focus:ring-PrimaryBlue"
+                    }
+                  `}
+                  placeholder="Enter your Message"
+                  rows={5}
+                ></textarea>
+                {errors.Message && (
+                  <p className="text-red-400 text-sm mt-1 italic">
+                    {errors.Message.message}
+                  </p>
+                )}
+              </div>
+            </Reveal>
+            <Reveal keyframes={slideUp} duration={800} delay={1200} triggerOnce>
+              <div>
+                <button
+                  className={`w-full flex items-center justify-center text-white p-4 rounded-xl font-title tracking-wide text-lg shadow-lg hover:brightness-110 focus:outline-none focus:ring-4 transition-all duration-300 ${
+                    isSubmitted
+                      ? "bg-PrimaryGreen cursor-not-allowed opacity-80 focus:ring-PrimaryGreen"
+                      : "bg-PrimaryBlue focus:ring-PrimaryGreen"
+                  }`}
+                  type="submit"
+                  disabled={isSubmitted}
+                >
+                  {isSubmitted ? (
+                    "We will contact you soon!"
+                  ) : (
+                    <>
+                      Get early access!
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        className="w-5 h-5 ml-4 flex-shrink-0"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                      </svg>
+                    </>
+                  )}
+                </button>
+              </div>
+            </Reveal>
+          </form>
         </div>
       </div>
     </section>

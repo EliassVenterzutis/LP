@@ -23,84 +23,71 @@ const slideUp = keyframes`
 
 const Features = () => {
   return (
-    <section className="text-gray-600 body-font">
-      <div className="container px-8 pt-15 pb-24 mx-auto">
-        <div className="flex flex-col text-center w-full mb-20">
-          <Reveal
-            keyframes={pureFade}
-            duration={800}
-            delay={200}
-            triggerOnce={true}
-          >
+    <section
+      id="features"
+      className="body-font text-gray-700 bg-gradient-to-br from-PrimaryWhite to-PrimaryGreen/30 py-20"
+    >
+      <div className="container mx-auto px-8 max-w-7xl">
+        <div className="text-center mb-16">
+          <Reveal keyframes={pureFade} duration={800} delay={200} triggerOnce>
             <p className="text-sm font-title uppercase tracking-widest text-PrimaryGreen">
               Who is it for?
             </p>
           </Reveal>
-          <Reveal
-            keyframes={slideUp}
-            duration={800}
-            delay={400}
-            triggerOnce={true}
-          >
-            <h2 className="mt-6 text-3xl font-title tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
+          <Reveal keyframes={slideUp} duration={800} delay={400} triggerOnce>
+            <h2 className="mt-4 text-4xl font-title font-extrabold text-gray-900 drop-shadow-md sm:text-5xl">
               Because Property Management Deserves Smart Tools
             </h2>
           </Reveal>
+          <Reveal keyframes={pureFade} duration={800} delay={600} triggerOnce>
+            <p className="mt-4 max-w-3xl mx-auto text-gray-600 font-base leading-relaxed">
+              Streamline your tendering process with our intuitive platform
+              built for property owners, managers, contractors, and service
+              providers.
+            </p>
+          </Reveal>
         </div>
-        <div className="flex flex-wrap -m-4">
-          <div className="p-4 w-full md:w-1/3">
-            <Reveal
-              keyframes={slideUp}
-              duration={800}
-              delay={600}
-              triggerOnce={true}
-            >
-              <div className="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
-                <div className="flex items-center mb-3">
-                  <div className="w-9 h-9 mr-3 inline-flex items-center justify-center rounded-full bg-PrimaryGreen text-white flex-shrink-0">
+        <div className="flex flex-wrap -m-6">
+          {/* Card 1 */}
+          <div className="p-6 w-full md:w-1/3 flex">
+            <Reveal keyframes={slideUp} duration={800} delay={700} triggerOnce>
+              <article className=" bg-white/80 rounded-3xl backdrop-blur-xl border border-white p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col flex-grow min-h-[320px]">
+                <div className="flex items-center mb-5 space-x-4">
+                  <div className="w-14 h-14 bg-PrimaryGreen rounded-full p-2 flex items-center justify-center text-white shadow-md aspect-square">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="w-6 h-6"
+                      className="w-8 h-8"
                       viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     >
-                      <path
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="1.5"
-                        d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Z"
-                      />
+                      <path d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Z" />
                     </svg>
                   </div>
-                  <h2 className="text-gray-900 text-lg font-title">
+                  <h3 className="font-title text-xl font-semibold text-gray-900">
                     Property Owners & Managers
-                  </h2>
+                  </h3>
                 </div>
-                <div className="flex-grow">
-                  <p className="leading-relaxed text-base font-base">
-                    All your properties. Every tender. One clear, connected
-                    workspace. From publishing and comparing offers to signing
-                    contracts and tracking payments — everything is centralized,
-                    secure, and easy to manage.
-                  </p>
-                </div>
-              </div>
+                <p className="text-gray-700 font-base flex-grow">
+                  Manage all your properties and tenders in one connected,
+                  easy-to-use workspace. Publish offers, sign contracts, and
+                  track payments with peace of mind.
+                </p>
+              </article>
             </Reveal>
           </div>
-          <div className="p-4 w-full md:w-1/3">
-            <Reveal
-              keyframes={slideUp}
-              duration={800}
-              delay={800}
-              triggerOnce={true}
-            >
-              <div className="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
-                <div className="flex items-center mb-3">
-                  <div className="w-9 h-9 mr-3 inline-flex items-center justify-center rounded-full bg-PrimaryGreen text-white flex-shrink-0">
+          {/* Card 2 */}
+          <div className="p-6 w-full md:w-1/3 flex">
+            <Reveal keyframes={slideUp} duration={800} delay={900} triggerOnce>
+              <article className=" bg-white/80 rounded-3xl backdrop-blur-xl border border-white p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col flex-grow min-h-[320px]">
+                <div className="flex items-center mb-5 space-x-4">
+                  <div className="w-14 h-14 bg-PrimaryGreen rounded-full p-2 flex items-center justify-center text-white shadow-md aspect-square">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="w-6 h-6"
+                      className="w-8 h-8"
                       viewBox="0 0 32 32"
                     >
                       <path
@@ -109,56 +96,43 @@ const Features = () => {
                       />
                     </svg>
                   </div>
-                  <h2 className="text-gray-900 text-lg font-title">
+                  <h3 className="font-title text-xl font-semibold text-gray-900">
                     Contractors & Service Providers
-                  </h2>
+                  </h3>
                 </div>
-                <div className="flex-grow">
-                  <p className="leading-relaxed text-base font-base">
-                    Find tenders that matter, win more projects, and get paid
-                    faster. Discover opportunities, send structured offers,
-                    track decisions in real time, and manage contracts and
-                    invoices without drowning in email threads.
-                  </p>
-                </div>
-              </div>
+                <p className="text-gray-700 font-base flex-grow">
+                  Discover tenders specific to your industry, submit structured
+                  offers, track progress in real time, and streamline your
+                  contract and invoice management.
+                </p>
+              </article>
             </Reveal>
           </div>
-          <div className="p-4 w-full md:w-1/3">
-            <Reveal
-              keyframes={slideUp}
-              duration={800}
-              delay={1000}
-              triggerOnce={true}
-            >
-              <div className="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
-                <div className="flex items-center mb-3">
-                  <div className="w-9 h-9 mr-3 inline-flex items-center justify-center rounded-full bg-PrimaryGreen text-white flex-shrink-0">
+          {/* Card 3 */}
+          <div className="p-6 w-full md:w-1/3 flex">
+            <Reveal keyframes={slideUp} duration={800} delay={1100} triggerOnce>
+              <article className=" bg-white/80 rounded-3xl backdrop-blur-xl border border-white p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col flex-grow min-h-[320px]">
+                <div className="flex items-center mb-5 space-x-4">
+                  <div className="w-14 h-14 bg-PrimaryGreen rounded-full p-3 flex items-center justify-center text-white shadow-md">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="200"
-                      height="200"
+                      className="w-14 h-14"
                       viewBox="0 0 24 24"
+                      fill="currentColor"
                     >
-                      <path
-                        fill="currentColor"
-                        d="M11.09 21.5a.67.67 0 0 1-.24 0a.83.83 0 0 1-.59-.81v-.11l.9-6.35H6.82a.8.8 0 0 1-.71-.43a.85.85 0 0 1 0-.86l2-3.49l4.1-6.52a.79.79 0 0 1 .92-.35a.83.83 0 0 1 .59.81v.11l-.9 6.35h4.35a.8.8 0 0 1 .71.43a.85.85 0 0 1 0 .86l-2 3.49l-4.1 6.52a.79.79 0 0 1-.69.35Zm-.53-1.21Zm-2.63-7.6h4a.84.84 0 0 1 .83.85v.11l-.59 4.14l2.5-4l1.44-2.48h-4a.84.84 0 0 1-.83-.85v-.11l.59-4.14l-2.5 4Zm-.57 1Zm9.28-3.34Zm-3.2-6.65Z"
-                      />
+                      <path d="M11.09 21.5a.67.67 0 0 1-.24 0a.83.83 0 0 1-.59-.81v-.11l.9-6.35H6.82a.8.8 0 0 1-.71-.43a.85.85 0 0 1 0-.86l2-3.49l4.1-6.52a.79.79 0 0 1 .92-.35a.83.83 0 0 1 .59.81v.11l-.9 6.35h4.35a.8.8 0 0 1 .71.43a.85.85 0 0 1 0 .86l-2 3.49l-4.1 6.52a.79.79 0 0 1-.69.35Zm-.53-1.21Zm-2.63-7.6h4a.84.84 0 0 1 .83.85v.11l-.59 4.14l2.5-4l1.44-2.48h-4a.84.84 0 0 1-.83-.85v-.11l.59-4.14l-2.5 4Zm-.57 1Zm9.28-3.34Zm-3.2-6.65Z" />
                     </svg>
                   </div>
-                  <h2 className="text-gray-900 text-lg font-title">
+                  <h3 className="font-title text-xl font-semibold text-gray-900">
                     Why Choose TenderPRO
-                  </h2>
+                  </h3>
                 </div>
-                <div className="flex-grow">
-                  <p className="leading-relaxed text-base font-base">
-                    Because Tendering Shouldn’t Be a Full-Time Job. TenderPRO
-                    cuts hours of admin by bringing your entire tender workflow
-                    into one transparent, AI-ready platform — from publishing to
-                    payment.
-                  </p>
-                </div>
-              </div>
+                <p className="text-gray-700 font-base flex-grow">
+                  TenderPRO combines all stages of tendering into a transparent
+                  and AI-ready platform, saving you time and reducing admin
+                  complexity from publishing to payment.
+                </p>
+              </article>
             </Reveal>
           </div>
         </div>

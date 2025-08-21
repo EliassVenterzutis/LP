@@ -2,7 +2,7 @@ import logo from "../../public/TenderPro_Small_Transperent.svg";
 
 const Footer = () => {
   return (
-    <footer className="text-gray-600 body-font overflow-x-hidden">
+    <footer id="contact" className="text-gray-600 body-font overflow-x-hidden">
       <div className="bg-gray-100">
         <div className="container mx-auto px-4 py-8 sm:py-12 flex flex-wrap md:flex-nowrap md:items-center lg:items-start flex-col md:flex-row">
           <div className="w-full md:w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
